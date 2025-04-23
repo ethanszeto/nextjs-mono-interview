@@ -1,4 +1,4 @@
-export const data = [
+export const blogs = [
   {
     title: "Exploring the Hidden Beaches of Bali",
     content: "From secluded coves to pristine sands, Bali's hidden beaches offer a slice of paradise away from the crowds.",
