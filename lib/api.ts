@@ -9,7 +9,7 @@ export async function callApi(method: HttpMethod, endpoint: string, body?: objec
     body: body ? JSON.stringify(body) : undefined,
   };
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, options);
+  const response = await fetch(endpoint, options);
   const jsonBody = await response.json();
 
   return {

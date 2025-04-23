@@ -10,6 +10,7 @@ export default async function Home() {
    * Backend URL: http://localhost:3000/api/all-blogs
    * API Documentation:
    */
+  const { data, ok } = await callApi("GET", "http://localhost:3000/api/all-blogs");
 
   /**
    * Task 2:
@@ -18,5 +19,15 @@ export default async function Home() {
    * using the BlogCard component?
    */
 
-  return <></>;
+  return (
+    <>
+      {ok ? (
+        data.map((blog: BlogCardProps, key: number) => (
+          <BlogCard title={blog.title} content={blog.content} author={blog.author} date={blog.date} key={key}></BlogCard>
+        ))
+      ) : (
+        <p>Failed to get blogs</p>
+      )}
+    </>
+  );
 }
