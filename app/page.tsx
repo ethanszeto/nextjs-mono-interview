@@ -8,7 +8,7 @@ export default async function Home() {
    * How can I GET the list of all blogs from the backend API, using the callAPI function?
    *
    * Backend URL: http://localhost:3000/api/all-blogs
-   * API Documentation:
+   * API Documentation: https://github.com/ethanszeto/nextjs-mono-interview/blob/main/documentation/api.md
    */
 
   /**
